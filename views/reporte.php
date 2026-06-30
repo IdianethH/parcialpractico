@@ -40,13 +40,13 @@ $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 body{
     font-family: Arial, sans-serif;
-    background:#f4f6f9;
+    background:#f46f9;
     padding:20px;
 }
 
 h1{
     text-align:center;
-    color:#0d6efd;
+    color:#373a11;
 }
 
 table{
@@ -56,7 +56,7 @@ table{
 }
 
 th{
-    background:#0d6efd;
+    background:#373a11;
     color:white;
     padding:10px;
 }
@@ -116,9 +116,9 @@ tr:nth-child(even){
 
 <td>
 <?php if($fila['estado_integridad'] == 'valido'): ?>
-<span class="valido">🟢 Válido</span>
+<span class="valido"> Válido</span>
 <?php else: ?>
-<span class="corrupto">🔴 Corrupto</span>
+<span class="corrupto"> Corrupto</span>
 <?php endif; ?>
 </td>
 
@@ -132,6 +132,9 @@ tr:nth-child(even){
 
 <a href="formulario.php">
 <button>Volver al Formulario</button>
+</a>
+<a href="exportar_excel.php">
+    <button type="button">Exportar a Excel</button>
 </a>
 
 </body>
